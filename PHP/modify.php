@@ -137,18 +137,10 @@
 		$password = $_POST['password'];
 		$result = mysqli_query($con, "select * from logininfo where Email = '$email'");
 		$row = mysqli_fetch_assoc($result);
-		if($name = mysqli_fetch_array($result)){
-				echo 'wrongmail';
-				exit();
-			}
+		
 		$flag = $row['flag'];
 		if($flag == '0'){
-			$result = mysqli_query($con, "select P_name from PatientLogin where Email='$email'");
-			$row = mysqli_fetch_row($result);
-			if (implode(null,$row) == null){
-				echo "wrongmail";
-				exit();
-			}
+			
 			$result = mysqli_query($con, "select P_name from PatientLogin where Email='$email'");
 			$name = mysqli_fetch_array($result);
 			$_SESSION["name"] = $name['P_name'];

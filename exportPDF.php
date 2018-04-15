@@ -1,7 +1,7 @@
 <?php
 require('./fpdf181/fpdf.php');
 session_start();
-$con=mysqli_connect("localhost","root","k136616","Healthcare");
+$con=mysqli_connect("localhost","root","root","Healthcare");
 	if (mysqli_connect_errno()){
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
