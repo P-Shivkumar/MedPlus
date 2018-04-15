@@ -25,3 +25,30 @@
     });
     
 })(jQuery);
+
+function insert_patient(){
+	var age=document.getElementById("age").innerHTML;
+	var name=document.getElementById("name").innerHTML;
+	var address=document.getElementById("address").innerHTML;
+	var username=document.getElementById("username").innerHTML;
+	alert("gaensh");
+	$.ajax
+	 ({
+		  type:'post',
+		  url:'PHP/signup.php',
+		  data:{
+		   insert_row:'insert_patient',
+		   misid_val:misid,
+		   name_val:name,
+		   yoa_val:yoa,
+		   fees_val:fees,
+		   cgpa_val:cgpa				
+	  	},
+	  success:function(response) {
+		   if(response!="")
+		   {
+			    
+		   }
+	  }
+	 });
+}

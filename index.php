@@ -4,20 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hospital Management System</title>
-  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+  <title>MediPlus</title>
+  <meta name="description" content="MediPlus is hospital which diagnose all the disease. We have more than 10 doctors. We provide best services. Useful site for keeping record of patient, consulted doctors and medical history. ">
+  <meta name="keywords" content="MediPlus, Healthcare, patient, doctor, medical history, best diagnosis">
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- =======================================================
-    Theme Name: Medilab
-    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -38,11 +32,9 @@
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#banner">Home</a></li>
-                <li class=""><a href="receptionist_login.php">Receptionist</a></li>
-                <li class=""><a href="doctor_login.php">Doctor</a></li>
-                <li class=""><a href="medical_login.php">Medical</a></li>
-		<li class=""><a href="Get_details.php">Get Details</a></li>
-                <li class=""><a href="#contact">Contact</a></li>
+                <li class=""><a href="#cnt">Contact</a></li>
+		<li class=""><a data-toggle="modal" data-target="#signup">SignUp</a></li>
+  		<li class=""><a data-toggle="modal" data-target="#login">Login</a></li>
               </ul>
             </div>
           </div>
@@ -57,7 +49,7 @@
             <div class="banner-text text-center">
               <h1 class="white">Hospital Managment System</h1>
               <p>Useful site for keeping record of patient, consulted doctors and medical history <br></p>
-              <a href="receptionist_login.php" class="btn btn-appoint">New Patient</a>
+              <a data-toggle="modal" data-target="#login" class="btn btn-appoint">Take an Appointment</a>
             </div>
             <div class="overlay-detail text-center">
               <a href="#service"><i class="fa fa-angle-down"></i></a>
@@ -68,6 +60,113 @@
     </div>
   </section>
   <!--/ banner-->
+  <!-- Login-->
+<div class="modal fade" id="login" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-primary">Login Form</h3>
+        </div>
+		<div class="modal-body">
+		<div class="row">	
+		    <form  method="post" role="form" class="form-horizontal">		
+			<div class="form-group">
+			<label class="control-label col-md-3">Email address *:</label>
+			<div class="col-md-9">
+			<input type="email" class="form-control" id="emailid" value="" placeholder="Please Enter Your Email" required>
+			</div>
+			</div>	
+			<div class="form-group">
+			<label class="control-label col-md-3">Password *:</label>
+			<div class="col-md-9">
+			<input type="password" class="form-control" id="loginpassword" value="" placeholder="Please Enter Your password" required>
+			</div>
+			</div>	
+			<div class="form-group">
+			<div class="col-md-3"></div>
+			<div class="col-md-9">
+			<button name="Login Now" onclick="CheckLogin()" class="btn btn-info">Login</button> <input type="reset" name="Reset" value="Reset" class="btn btn-default"> 
+			</div>	
+			</div>	
+			</form>					
+                </div>
+		</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+<!--/ Login-->
+<!--Signup-->
+<div class="modal fade" id="signup" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-primary">Signup Form</h3>
+        </div>
+		<div class="modal-body">
+		<div class="row">	
+		    <form  method="post" role="form" class="form-horizontal">		
+			<div class="form-group">
+			<label class="control-label col-md-3">Your Name *:</label>
+			<div class="col-md-9">
+			<input type="text" class="form-control" id="signupname" value="" placeholder="Please Enter Your Name" required>
+			</div>
+			</div>
+			<div class="form-group">
+			<label class="control-label col-md-3">Your Age *:</label>
+			<div class="col-md-9">
+			<input type="text" class="form-control" id="age" value="" placeholder="Please Enter Your age" required>
+			</div>
+			</div>
+			<div class="form-group">
+			<label class="control-label col-md-3">Your Address *:</label>
+			<div class="col-md-9">
+			<input type="text" class="form-control" id="address" value="" placeholder="Please Enter Your address" required>
+			</div>
+			</div>
+			<div class="form-group">
+			<label class="control-label col-md-3">Email address *:</label>
+			<div class="col-md-9">
+			<input type="email" class="form-control" id="signupemail" value="" placeholder="Please Enter Your Email" required>
+			</div>
+			</div>	
+			<div class="form-group">
+			<label class="control-label col-md-3">Password *:</label>
+			<div class="col-md-9">
+			<input type="password" class="form-control" id="password" value="" placeholder="Please Enter Your password" required>
+			</div>
+			</div>	
+			<div class="form-group">
+			<label class="control-label col-md-3">Retype Password *:</label>
+			<div class="col-md-9">
+			<input type="password" class="form-control" id="repassword" value="" onkeyup="checkPassword()" placeholder="Please Enter Retype Your password" required>
+			</div>
+			</div>
+			<div class="form-group">
+			<div class="col-md-9">
+			<center><span id='message'></span></center>
+			</div>
+			</div>	
+			<div class="form-group">
+			<div class="col-md-3"></div>
+			<div class="col-md-9">
+			<button name="Signup Now" value="Signup Now" onclick="NewUser()" class="btn btn-info">Signup Now</button> <input type="reset" name="Reset" value="Reset" class="btn btn-default"> 
+			</div>	
+			</div>	
+			</form>					
+                </div>
+		</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+<!--/ Signup-->
   <!--service-->
   <section id="service" class="section-padding">
     <div class="container">
@@ -75,7 +174,7 @@
         <div class="col-md-4 col-sm-4">
           <h2 class="ser-title">Our Service</h2>
           <hr class="botm-line">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>
+          <p>MediPlus provides world class services. We have all modern equipments, which are helpful for diagnosis. We have digitalised operation system. We care for our patients.</p>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="service-info">
@@ -84,7 +183,7 @@
             </div>
             <div class="icon-info">
               <h4>24 Hour Support</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>We provide 24 hour support. We have our doctors and nurses, who are present for your support.</p>
             </div>
           </div>
           <div class="service-info">
@@ -93,7 +192,7 @@
             </div>
             <div class="icon-info">
               <h4>Emergency Services</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>We provide emergency services, we have our vans who gave best services. We have specialist for all body parts.</p>
             </div>
           </div>
         </div>
@@ -104,7 +203,7 @@
             </div>
             <div class="icon-info">
               <h4>Medical Counseling</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>We provide free medical counseling for all our patients. We have our own psychatrist.</p>
             </div>
           </div>
           <div class="service-info">
@@ -113,7 +212,7 @@
             </div>
             <div class="icon-info">
               <h4>Premium Healthcare</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>We provide premium healthcare. We have special services for our signed in patients.</p>
             </div>
           </div>
         </div>
@@ -126,21 +225,16 @@
     <div class="container">
       <div class="row">
         <div class="schedule-tab">
-          <div class="col-md-4 col-sm-4 bor-left">
+          <div class="col-md-8 col-sm-8 bor-left">
             <div class="mt-boxy-color"></div>
             <div class="medi-info">
               <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
+              <p> <h4> 24 X 7 service </h4>
+		</br>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <a class="btn medi-info-btn" onclick="emergency()">Take an Appointment</a>
             </div>
           </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
-            </div>
-          </div>
+          
           <div class="col-md-4 col-sm-4 mt-boxy-3">
             <div class="mt-boxy-color"></div>
             <div class="time-info">
@@ -148,16 +242,13 @@
               <table style="margin: 8px 0px 0px;" border="1">
                 <tbody>
                   <tr>
-                    <td>Monday - Friday</td>
-                    <td>8.00 - 17.00</td>
+                    <td>Monday - Saturday</td>
+                    <td>9.00 - 17.00</td>
                   </tr>
-                  <tr>
-                    <td>Saturday</td>
-                    <td>9.30 - 17.30</td>
-                  </tr>
+   
                   <tr>
                     <td>Sunday</td>
-                    <td>9.30 - 15.00</td>
+                    <td>9.00 - 16.00</td>
                   </tr>
                 </tbody>
               </table>
@@ -168,40 +259,10 @@
     </div>
   </section>
   <!--cta-->
-  <!--about-->
-  <section id="about" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-4 col-xs-12">
-          <div class="section-title">
-            <h2 class="head-title lg-line">The Medilap <br>Ultimate Dream</h2>
-            <hr class="botm-line">
-            <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-            <a href="" style="color: #0cb8b6; padding-top:10px;">Know more..</a>
-          </div>
-        </div>
-        <div class="col-md-9 col-sm-8 col-xs-12">
-          <div style="visibility: visible;" class="col-sm-9 more-features-box">
-            <div class="more-features-box-text">
-              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-              <div class="more-features-box-text-description">
-                <h3>It's something important you want to know.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>
-              </div>
-            </div>
-            <div class="more-features-box-text">
-              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-              <div class="more-features-box-text-description">
-                <h3>It's something important you want to know.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ about-->
+  <!--emergency-->
+  <section id="emergency" class="section-padding">  
+  </section> 
+  <!--emergency-->
   <!--doctor team-->
   <section id="doctor-team" class="section-padding">
     <div class="container">
@@ -270,7 +331,7 @@
     </div>
   </section>
   <!--/ doctor team-->
-  <!--testimonial-->
+  <!--petient opinion-->
   <section id="testimonial" class="section-padding">
     <div class="container">
       <div class="row">
@@ -281,63 +342,46 @@
         <div class="col-md-4 col-sm-4">
           <div class="testi-details">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Amazing staff and services. The follow up call later in the day was an impressive level health “care!” </p>
           </div>
           <div class="testi-info">
             <!-- User Image -->
             <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
             <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
+            <h3>Ganesh<span>Landge</span></h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="testi-details">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>I had a wisdom tooth removed and it was a good experience for something that was a bit scary for me. Both Dr. Bays and Alyssa were very caring, professional...	</p>
           </div>
           <div class="testi-info">
             <!-- User Image -->
             <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
             <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
+            <h3>Shiv<span>Patil</span></h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="testi-details">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>I have four daughters and daughter Bays has performed wisdom teeth removal on all of them and jaw surgery on my oldest. We are very pleased with his work and...</p>
           </div>
           <div class="testi-info">
             <!-- User Image -->
             <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
             <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
+            <h3>Pawan<span>Hage</span></h3>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!--/ testimonial-->
-  <!--cta 2-->
-  <section id="cta-2" class="section-padding">
-    <div class="container">
-      <div class=" row">
-        <div class="col-md-2"></div>
-        <div class="text-right-md col-md-4 col-sm-4">
-          <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
-        </div>
-        <div class="col-md-4 col-sm-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek
-          <p class="text-right text-primary"><i>— Medilap Healthcare</i></p>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-  </section>
-  <!--cta-->
-
+ 
   <!--contact-->
-  <section id="contact" class="section-padding">
+  <section id="contactus" name="contact" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -347,11 +391,11 @@
         <div class="col-md-4 col-sm-4">
           <h3>Contact Info</h3>
           <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>123, Shivajinagar <br> Pune, 411005</p>
           <div class="space"></div>
-          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@mediplus.com</p>
           <div class="space"></div>
-          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 9882212312</p>
         </div>
         <div class="col-md-8 col-sm-8 marb20">
           <div class="contact-info">
@@ -397,7 +441,7 @@
               <h4 class="white no-padding">About Us</h4>
             </div>
             <div class="info-sec">
-              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>
+              <p>MediPlus is a hospital which provides you best services, for all the diseases. </p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
@@ -428,24 +472,6 @@
         </div>
       </div>
     </div>
-    <div class="footer-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            © Copyright Medilab Theme. All Rights Reserved
-            <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </footer>
   <!--/ footer-->
 
@@ -454,6 +480,8 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="contactform/contactform.js"></script>
+  <script src="js/modify.js"></script>
+  <script src="js/jquery.js"></script>
 
 </body>
 
